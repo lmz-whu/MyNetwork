@@ -291,7 +291,7 @@ class Network():
 #         return np.maximum(np.zeros_like(z), z)
         return np.maximum(0.01*z, z)   #leaky ReLU
     def ReLU_devirative(self, z):
-        return np.where(z >= 0, 1, 0)
+        return np.where(z >= 0, 1, 0.01)
 
 
 
